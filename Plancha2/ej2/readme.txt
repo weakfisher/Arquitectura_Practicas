@@ -1,0 +1,1 @@
+Una forma de obtener el retorno de un programa es con el comand "echo $?"  desde gdb
