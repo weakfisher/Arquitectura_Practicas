@@ -1,4 +1,11 @@
 .global main
+/* 3.a)S1 = n1+n2 = -36 OF = 1
+     b)S2 = n3+n3 = -117
+     c)s3 = n5+n3 = 102 OF = 1 , CF = 1
+     d)S4 = n2-n4 = 82  OF =1
+     e)S5=  n5-n2 = -45 OF = 1, CF =1
+*/
+
 .data
 n1 : .byte 100
 n2 : .byte 120
