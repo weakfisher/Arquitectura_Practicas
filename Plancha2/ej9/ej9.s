@@ -1,9 +1,9 @@
 .data
-strLista: .asciz "Lista: "
-format: .asciz "%c "
 list: .byte 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
-listInvertida: .byte 0
+listInvertida: .space 10
 length: .byte 10
+strLista: .asciz "Lista: "
+format: .asciz "%d "
 
 .text
 .global main
@@ -42,14 +42,20 @@ intermedioDos:
     xorq %rbx, %rbx
     xorq %rcx, %rcx
     movb length, %cl
-
+    xorq %r15, %r15
+    
+    movb %cl, %r15b
+    incq %r15
 mostrarLista:
 
     lea format, %rdi
-    lea list, %rdx
-    movq (%rdx, %rbx, 1), %rsi
-    xorq %rax, %rax
+    lea listInvertida, %rdx
+    xorq %rsi, %rsi
+    movb (%rdx, %rbx, 1), %sil
+   
     call printf
+    decq %r15  
+    movb %r15b, %cl
     incq %rbx
     loop mostrarLista
 
@@ -60,3 +66,4 @@ fin:
     ret
 
 
+#milton bobi
