@@ -1,9 +1,9 @@
 .data
-list: .byte 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
-listInvertida: .space 10
-length: .byte 10
-strLista: .asciz "Lista: "
-format: .asciz "%d "
+    list: .byte 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+    listInvertida: .space 10
+    length: .byte 10
+    strLista: .asciz "Lista: "
+    format: .asciz "%d "
 
 .text
 .global main
